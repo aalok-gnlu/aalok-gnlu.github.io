@@ -34,7 +34,8 @@
     <div id="splash-screen" class="fixed inset-0 z-[100] bg-[#F0F0EE] flex flex-col items-center justify-center cursor-pointer transition-colors duration-700 ease-in-out">
         
         <!-- The Flying Folder Clone -->
-        <div id="splash-folder-wrapper" class="relative w-full max-w-lg md:max-w-2xl h-64 md:h-72 flex items-end justify-center transform scale-110 md:scale-150 transition-all duration-700 ease-in-out will-change-transform">
+        <!-- Fixed: Reduced mobile scaling and added w-[90%] to prevent edge-to-edge bleeding on phones -->
+        <div id="splash-folder-wrapper" class="relative w-[90%] sm:w-full max-w-lg md:max-w-2xl h-64 md:h-72 flex items-end justify-center transform scale-100 sm:scale-110 md:scale-150 transition-all duration-700 ease-in-out will-change-transform">
             <!-- Folder Back Tab -->
             <div class="absolute bottom-[11.9rem] md:bottom-[12.9rem] left-[10%] md:left-[20%] w-24 md:w-32 h-8 md:h-10 bg-[#A02020] rounded-t-xl border-t-2 border-x-2 border-[#1A1A1A] z-0"></div>
             
@@ -101,7 +102,8 @@
             </div>
 
             <!-- Target Slot for the Flying Folder (Starts hidden at opacity-0) -->
-            <div id="target-folder-wrapper" class="relative w-full max-w-lg md:max-w-2xl h-64 md:h-72 flex items-end justify-center group cursor-pointer mt-6 mx-auto opacity-0 transition-opacity duration-300">
+            <!-- Fixed: Added w-[90%] for mobile breathing room to match the splash screen -->
+            <div id="target-folder-wrapper" class="relative w-[90%] sm:w-full max-w-lg md:max-w-2xl h-64 md:h-72 flex items-end justify-center group cursor-pointer mt-6 mx-auto opacity-0 transition-opacity duration-300">
                 <!-- Folder Back Tab -->
                 <div class="absolute bottom-[11.9rem] md:bottom-[12.9rem] left-[10%] md:left-[20%] w-24 md:w-32 h-8 md:h-10 bg-[#A02020] rounded-t-xl border-t-2 border-x-2 border-[#1A1A1A] z-0 transition-transform duration-500 group-hover:-translate-y-1"></div>
                 
@@ -226,6 +228,7 @@
         </div>
 
         <!-- INTERACTIVE SKILLS FOLDER -->
+        <!-- Fixed: Increased translation height for ALL pills by ~2rem so they fully clear the folder flap on mobile -->
         <div class="md:col-span-12 lg:col-span-4 min-h-[500px] lg:min-h-[550px] p-6 md:p-8 bg-[#FFD700] border-2 border-[#1A1A1A] transition-all duration-300 relative overflow-hidden shadow-[6px_6px_0px_0px_#1A1A1A] flex flex-col justify-between group cursor-pointer active:scale-[0.99]">
             <div class="flex justify-between items-start z-30">
                 <p class="text-sm font-black uppercase tracking-widest text-[#1A1A1A] border-b-2 border-[#1A1A1A] pb-1">Toolkit</p>
@@ -241,47 +244,47 @@
                 <div class="absolute bottom-10 w-full flex justify-center items-end z-10 pointer-events-none">
                     
                     <!-- 9 -->
-                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#FFD700] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[200ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[17rem] sm:group-hover:-translate-y-[20rem] group-hover:-translate-x-[4.5rem] sm:group-hover:-translate-x-[5rem] group-hover:-rotate-[16deg] rounded-full z-10 shadow-sm flex items-center justify-center">
+                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#FFD700] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[200ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[19rem] sm:group-hover:-translate-y-[21.5rem] group-hover:-translate-x-[4.5rem] sm:group-hover:-translate-x-[5rem] group-hover:-rotate-[16deg] rounded-full z-10 shadow-sm flex items-center justify-center">
                         <span class="text-[#1A1A1A] font-black text-[9px] sm:text-[10px] uppercase tracking-wider whitespace-nowrap">Public Speaking</span>
                     </div>
                     
                     <!-- 8 -->
-                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#E3342F] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[175ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[15.25rem] sm:group-hover:-translate-y-[18rem] group-hover:-translate-x-[3.8rem] sm:group-hover:-translate-x-[4rem] group-hover:-rotate-[14deg] rounded-full z-20 shadow-sm flex items-center justify-center">
+                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#E3342F] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[175ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[17.25rem] sm:group-hover:-translate-y-[19.5rem] group-hover:-translate-x-[3.8rem] sm:group-hover:-translate-x-[4rem] group-hover:-rotate-[14deg] rounded-full z-20 shadow-sm flex items-center justify-center">
                         <span class="text-white font-black text-[9px] sm:text-[10px] uppercase tracking-wider whitespace-nowrap">MS Office Suite of Tools</span>
                     </div>
 
                     <!-- 7 -->
-                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#1A1A1A] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[150ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[13.5rem] sm:group-hover:-translate-y-[16rem] group-hover:-translate-x-[3.1rem] sm:group-hover:-translate-x-[3.1rem] group-hover:-rotate-[12deg] rounded-full z-30 shadow-sm flex items-center justify-center">
+                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#1A1A1A] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[150ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[15.5rem] sm:group-hover:-translate-y-[17.5rem] group-hover:-translate-x-[3.1rem] sm:group-hover:-translate-x-[3.1rem] group-hover:-rotate-[12deg] rounded-full z-30 shadow-sm flex items-center justify-center">
                         <span class="text-white font-black text-[9px] sm:text-[10px] uppercase tracking-wider whitespace-nowrap">Statutory Analysis of Cases</span>
                     </div>
 
                     <!-- 6 -->
-                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-white border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[125ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[11.75rem] sm:group-hover:-translate-y-[14rem] group-hover:-translate-x-[2.3rem] sm:group-hover:-translate-x-[2.3rem] group-hover:-rotate-[10deg] rounded-full z-40 shadow-sm flex items-center justify-center">
+                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-white border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[125ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[13.75rem] sm:group-hover:-translate-y-[15.5rem] group-hover:-translate-x-[2.3rem] sm:group-hover:-translate-x-[2.3rem] group-hover:-rotate-[10deg] rounded-full z-40 shadow-sm flex items-center justify-center">
                         <span class="text-[#1A1A1A] font-black text-[9px] sm:text-[10px] uppercase tracking-wider whitespace-nowrap">Advanced Research</span>
                     </div>
 
                     <!-- 5 -->
-                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#00C4CC] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[100ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[10rem] sm:group-hover:-translate-y-[12rem] group-hover:-translate-x-[1.6rem] sm:group-hover:-translate-x-[1.6rem] group-hover:-rotate-[8deg] rounded-full z-50 shadow-sm flex items-center justify-center">
+                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#00C4CC] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[100ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[12rem] sm:group-hover:-translate-y-[13.5rem] group-hover:-translate-x-[1.6rem] sm:group-hover:-translate-x-[1.6rem] group-hover:-rotate-[8deg] rounded-full z-50 shadow-sm flex items-center justify-center">
                         <span class="text-white font-black text-[9px] sm:text-[10px] uppercase tracking-wider whitespace-nowrap">Creative Brain Cells</span>
                     </div>
 
                     <!-- 4 -->
-                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#FFD700] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[75ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[8.25rem] sm:group-hover:-translate-y-[10rem] group-hover:-translate-x-[1rem] sm:group-hover:-translate-x-[1rem] group-hover:-rotate-[6deg] rounded-full z-60 shadow-sm flex items-center justify-center">
+                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#FFD700] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[75ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[10.25rem] sm:group-hover:-translate-y-[11.5rem] group-hover:-translate-x-[1rem] sm:group-hover:-translate-x-[1rem] group-hover:-rotate-[6deg] rounded-full z-60 shadow-sm flex items-center justify-center">
                         <span class="text-[#1A1A1A] font-black text-[9px] sm:text-[10px] uppercase tracking-wider whitespace-nowrap">Professional Presentations</span>
                     </div>
 
                     <!-- 3 -->
-                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#E3342F] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[50ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[6.5rem] sm:group-hover:-translate-y-[8rem] group-hover:-translate-x-[0.5rem] sm:group-hover:-translate-x-[0.5rem] group-hover:-rotate-[4deg] rounded-full z-[70] shadow-sm flex items-center justify-center">
+                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#E3342F] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[50ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[8.5rem] sm:group-hover:-translate-y-[9.5rem] group-hover:-translate-x-[0.5rem] sm:group-hover:-translate-x-[0.5rem] group-hover:-rotate-[4deg] rounded-full z-[70] shadow-sm flex items-center justify-center">
                         <span class="text-white font-black text-[9px] sm:text-[10px] uppercase tracking-wider whitespace-nowrap">Legal Drafting</span>
                     </div>
 
                     <!-- 2 -->
-                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#1A1A1A] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[25ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[4.75rem] sm:group-hover:-translate-y-[6rem] group-hover:-translate-x-[0.2rem] sm:group-hover:-translate-x-[0.2rem] group-hover:-rotate-[2deg] rounded-full z-[80] shadow-sm flex items-center justify-center">
+                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#1A1A1A] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[25ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[6.75rem] sm:group-hover:-translate-y-[7.5rem] group-hover:-translate-x-[0.2rem] sm:group-hover:-translate-x-[0.2rem] group-hover:-rotate-[2deg] rounded-full z-[80] shadow-sm flex items-center justify-center">
                         <span class="text-white font-black text-[9px] sm:text-[10px] uppercase tracking-wider whitespace-nowrap">DaVinci Resolve</span>
                     </div>
 
                     <!-- 1 -->
-                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#00C4CC] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[0ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[3rem] sm:group-hover:-translate-y-[4rem] group-hover:translate-x-0 group-hover:rotate-0 rounded-full z-[90] shadow-sm flex items-center justify-center">
+                    <div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#00C4CC] border-2 border-[#1A1A1A] absolute transition-all duration-300 ease-out delay-[0ms] opacity-0 scale-50 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:-translate-y-[5rem] sm:group-hover:-translate-y-[5.5rem] group-hover:translate-x-0 group-hover:rotate-0 rounded-full z-[90] shadow-sm flex items-center justify-center">
                         <span class="text-white font-black text-[9px] sm:text-[10px] uppercase tracking-wider whitespace-nowrap">Canva</span>
                     </div>
 
@@ -486,7 +489,7 @@
                 splashWrapper.style.setProperty('--tw-translate-y', `${translateY}px`);
 
                 // Trigger the scale down effect (shrinks to 1.0x size)
-                splashWrapper.classList.remove('scale-110', 'md:scale-150');
+                splashWrapper.classList.remove('scale-100', 'sm:scale-110', 'md:scale-150');
                 splashWrapper.classList.add('scale-100');
 
                 // Fade out the solid background color to reveal the portfolio underneath
