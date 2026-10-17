@@ -1,1 +1,0 @@
-Read this file regarding assets folder
